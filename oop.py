@@ -2,14 +2,17 @@ from math import pi
 
 # Class and object
 class Shape: 
+    # class attribute
+    dimensions = 2
+
     def __init__(self, name):
-        self.name = name
+        self.name = name # instance attribute
 
     def area(self):
         pass
 
     def fact(self):
-        return "I am a 2-dimensional shape"
+        return "I am a geometric shape"
 
     def __str__(self):
         return self.name
@@ -19,19 +22,20 @@ shape1 = Shape("rectangle")
 print(shape1)
 print(f"shape1 is a {shape1.name}")
 print(shape1.fact())
+print(f"I have this many dimensions: {shape1.dimensions}")
 
 # Inheritance
 
 # create new class with details of existing class
 class Circle(Shape):
     def __init__(self, radius):
-        super().__init__("Circle")
+        super().__init__("Circle") # super() means it searches the parent class for the method
         self.radius = radius
 
     def area(self):
         return pi*(self.radius**2)
 
-print("\n======== Polymorphism ========")
+print("\n======== Inheritance ========")
 shape2 = Circle(3)
 print(shape2)
 print(shape2.area())
@@ -76,8 +80,12 @@ class Square(Shape):
     def fact(self):
         return "All my sides are the same length"
 
-print("\n======== Inheritance ========")
+print("\n======== Polymorphism ========")
 shape4 = Square(3)
 print(shape4)
 print(shape4.area())
 print(shape4.fact())
+
+print(isinstance(shape4, Square))
+print(isinstance(shape4, Triangle))
+print(isinstance(shape4, Shape))
