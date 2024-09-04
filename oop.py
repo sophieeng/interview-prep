@@ -86,6 +86,7 @@ print(shape4)
 print(shape4.area())
 print(shape4.fact())
 
+print("\n======== isinstance method ========")
 print(isinstance(shape4, Square))
 print(isinstance(shape4, Triangle))
 print(isinstance(shape4, Shape))
