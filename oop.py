@@ -1,6 +1,6 @@
 from math import pi
 
-# Class and object
+# ---------------------------- Class and object ----------------------------
 class Shape: 
     # class attribute
     dimensions = 2
@@ -24,7 +24,7 @@ print(f"shape1 is a {shape1.name}")
 print(shape1.fact())
 print(f"I have this many dimensions: {shape1.dimensions}")
 
-# Inheritance
+# ---------------------------- Inheritance ----------------------------
 
 # create new class with details of existing class
 class Circle(Shape):
@@ -41,7 +41,7 @@ print(shape2)
 print(shape2.area())
 print(shape2.fact()) # using the fact method from Shape class
     
-# Encapsulation
+# ---------------------------- Encapsulation ----------------------------
 
 # bundle attributes within class
 # use private attributes
@@ -65,7 +65,7 @@ print(shape3.area())
 shape3.base(7)
 print(shape3.area())
 
-# Polymorphism
+# ---------------------------- Polymorphism ----------------------------
 
 # have classes with the same method names
 class Square(Shape):

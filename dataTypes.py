@@ -1,6 +1,6 @@
 # basic examples of different python data types
 
-# string
+# ---------------------------- string ----------------------------
 str1 = "Hello world!"
 str2 = "My name is Sophie."
 str3 = str1 + " " + str2
@@ -8,7 +8,7 @@ print(str3)
 print(str1, str2)
 print(f"{str1} {str2}")
 
-# int 
+# ---------------------------- int ----------------------------
 int1 = 4
 int2 = 2
 
@@ -24,7 +24,7 @@ print(int1, "divided (/)", int2, "equals", int4)
 int4 = int1 // int2
 print(int1, "divided (//)", int2, "equals", int4)
 
-# list
+# ---------------------------- list ----------------------------
 list1 = ["apples", "oranges", "bananas"]
 print(list1)
 print(len(list1))
@@ -96,11 +96,11 @@ print("-5::",list8[-5::])
 print("-1:-7:",list8[-1:-7:]) # nonsense
 print("-7:-1:",list8[-7:-1:])
 
-# tuple
+# ---------------------------- tuple ----------------------------
 tuple1 = (1, 2, 3, 3, 4)
 print(tuple1)
 
-# set
+# ---------------------------- set ----------------------------
 set1 = {1, 2, 3, 4, 3}
 print(set1)
 set2 = {1, "hi", False}
@@ -110,4 +110,39 @@ print(set1)
 set1.remove(5)
 print(set1)
 
-# dicts
+# ---------------------------- dict ----------------------------
+dict1 = {
+    "fruit":"apple",
+    "vegetable":"carrot",
+    "protein":"salmon",
+    "days":7
+}
+print(dict1)
+
+dict2 = dict(name = "Sophie", age = 20, city = "Oakland")
+print(dict2)
+
+    # get value
+print(dict1["fruit"])
+print(dict1.get("fruit"))
+print(dict1.values())
+
+    # get keys
+keys = dict1.keys()
+print(keys)
+
+items = dict1.items()
+print(items)
+# for key, value in items:
+#     print(key)
+#     print(value)
+
+    # change, add, remove
+dict2["city"] = "San Francisco"
+print(dict2)
+
+dict2["state"] = "California"
+print(dict2)
+
+dict2.pop("state")
+print(dict2)
